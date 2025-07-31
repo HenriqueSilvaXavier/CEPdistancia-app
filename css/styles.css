@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/map3.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    position: relative; /* Adicionado para posicionar a barra de carregamento */
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: #335f6f; /* Altera a cor do texto para um tom de azul escuro */
+    padding: 10px; /* Ajusta o padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    border: 2px solid #335f6f; /* Adiciona uma borda azul escura */
+    border-radius: 5px; /* Arredonda os cantos da borda */
+    position: relative; /* Adicionado para posicionar a barra de carregamento dentro do mesmo div */
+    overflow: hidden; /* Garante que o conteúdo da barra de carregamento não ultrapasse o container */
+    height: 30px; /* Altura reduzida para o container */
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    z-index: 1; /* Garante que a barra de carregamento fique acima do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Inicialmente escondido */
+}
+
+.spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #007bff;
+    width: 30px; /* Diminuído o tamanho do spinner */
+    height: 30px; /* Diminuído o tamanho do spinner */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media (max-width: 240px) {
+    div#result>p{
+        font-size: 0.8em;
+    }
+}
